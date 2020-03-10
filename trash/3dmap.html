@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <script src="http://www.webglearth.com/v2/api.js"> </script>
+  <script>
+    var earth;
+    function initialize(){
+      var options = { zoom: 1.0,  sky: true, position: [47.19537,8.524404]};
+      earth = new WE.map('earth_div', options);
+      WE.tileLayer('http://tileserver.maptiler.com/nasa/{z}/{x}/{y}.jpg', {
+          minZoom: 0,
+          maxZoom: 5,
+          attribution: 'NASA'
+        }).addTo(earth);
+
+      //new marker
+      var marker = WE.marker([9.488822, 7.907320]).addTo(earth);
+      marker.bindPopup('<b>Hello World</b>');
+
+      // Start a simple rotation animation
+        var before = null;
+        requestAnimationFrame(function animate(now) {
+            var c = earth.getPosition();
+            var elapsed = before? now - before: 0;
+            before = now;
+            earth.setCenter([c[0], c[1] + 0.1*(elapsed/30)]);
+            requestAnimationFrame(animate);
+        });
+
+    var bounds = [[35.98245136, -112.26379395], [36.13343831, -112.10998535]];
+          function panIn(){
+        earth.panInsideBounds(bounds);  
+      }
+      }
+  </script>
+</head>
+<body onload="initialize()">
+  <div id="earth_div" style="background-color: black"></div>
+</body>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<!-- <script>
+  $('#earth_div').on('click', function(){
+    $(this).fadeOut(5000);
+  })
+</script> -->
+</html>

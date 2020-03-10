@@ -1,0 +1,74 @@
+<!-- Edit the text with whatever you want :) --> 
+<!-- Works with emojis too ! -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<link rel="stylesheet" type="text/css" href="poss.css">
+<!-- bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+	<!-- web gl -->
+	<script src="http://www.webglearth.com/v2/api.js"> </script>
+	<!-- script to creare map -->
+	<script>
+    var earth;
+    var value;
+    function initialize(){
+      var options = { zoom: 2.0,  sky: true, position: [47.19537,8.524404]};
+      earth = new WE.map('earth_div', options);
+      WE.tileLayer('http://tileserver.maptiler.com/nasa/{z}/{x}/{y}.jpg', {
+          minZoom: 0,
+          maxZoom: 5,
+        }).addTo(earth);
+               // Start a simple rotation animation
+        var before = null;
+        requestAnimationFrame(function animate(now) {
+            var c = earth.getPosition();
+            var elapsed = before? now - before: 0;
+            before = now;
+            earth.setCenter([c[0], c[1] + 0.1*(elapsed/30)]);
+            value = requestAnimationFrame(animate);
+        });
+
+      }
+      function stopAni(value){
+        cancelAnimationFrame(value);
+      }
+      var bounds = [[-6.98245136, -3.26379395], [-6.13343831, -3.10998535]];
+      function panIn(){
+        earth.panInsideBounds(bounds);  
+      }
+  </script>
+</head>
+<body background-color="black">
+	<div class="container-fluid p-0" style="height: 550px">
+    <div id="earth_div" class="h-100"></div>
+  </div>
+  <iframe id="frame" src="poss.html" width="100%" height="300px" style="border: none;"></iframe>
+</body>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script>
+  /*$(window).on('load',  function(){
+    $('#earth_div').fadeIn(5000);
+  });*/
+  setTimeout(initialize(), 6000);
+  $('#earth_div').on('click', function(){
+    stopAni(value);
+    panIn();
+    $(this).fadeOut(4000);
+    $('#frame').fadeOut(4000);
+    setTimeout(function(){
+      window.location.href = 'home2.html';
+    }, 4000);
+  } );
+</script>
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<script src='poss.js'></script>
+</html>

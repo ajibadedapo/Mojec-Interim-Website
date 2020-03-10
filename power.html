@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+<link rel="stylesheet" href="css/gooey.css">
+</head>
+<body>
+	<!-- NOTE: By the moment this experiment only goes smooth on Chrome, I need to make some changes.. -->
+
+
+<!--
+==================
+==================
+Main Content
+==================
+==================
+-->
+<!-- Gooey Container -->
+<div class="goo-container">
+  <!-- Content Section -->
+  <section>  
+  </section>
+  <!-- Background Gradient -->
+  <div class="goo-box">
+    <!-- Gooey Cursor -->
+    <div class="cursor goo-cursor"></div>
+  </div>
+</div>
+
+<!-- Content Section -->
+<div class="bg" style=" background-image:
+          linear-gradient(
+                  rgba(0, 0, 0, 0.5),
+                  rgba(0, 0, 0, 0.5)
+          ), url('pics/powerline.jpg');">
+<section >
+  <img src="pics/mojec_logo.png" style="width: 50%;" >
+  <h1>MOJEC POWER</h1>
+  <p>MOJEC International Limited has a long time contract with almost all Distribution Companies in Nigeria, to help
+  rejuvenate the Power Distribution sector, with the implementation of AMI system, and standard revenue collection process.
+    Mojec is engaged with the Transmission Company of Nigeria in construction of Transmission Power Plant, and the supply of Power
+    gridlines Equipment.
+  </p>
+  <p>
+    Mojec is a leading manufatureer and contractor on power transmission and distribution equipments.
+    Mojec is currently one of the leading companies in Nigeria and inpartnership with various companies all over the world in electricity
+    distribution and power generation.
+  </p>
+</section>
+</div>
+
+
+<!-- Gooey Container -->
+<div class="goo-container">
+  <!-- Content Section -->
+  <section>  
+    <p><a href="#" target="_blank">Find Out More</a></p>
+  </section>
+  <!-- Background Gradient -->
+  <div class="goo-box">
+    <!-- Gooey Cursor -->
+    <div class="cursor goo-cursor"></div>
+  </div>
+</div>
+
+
+<!--
+==================
+==================
+SVG Filters
+==================
+==================
+-->
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  version="1.1">
+  <defs>
+    <filter id="goo">
+      <feGaussianBlur 
+        in="SourceGraphic" 
+        stdDeviation="13" 
+        result="goo-blur" 
+      />
+      <feColorMatrix 
+        in="goo-blur" 
+        mode="matrix" 
+        values="
+          1 0 0 0 0  
+          0 1 0 0 0  
+          0 0 1 0 0  
+          0 0 0 20 -11" 
+      />
+    </filter>
+  </defs>
+</svg>
+
+
+<!--
+==================
+==================
+True Cursor
+==================
+==================
+-->
+<div class="cursor true-cursor"></div>
+
+
+<!--
+==================
+==================
+Google Fonts
+==================
+==================
+-->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,600" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/gooey.js"></script>
+</body>
+</html>

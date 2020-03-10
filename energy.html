@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+<link rel="stylesheet" href="css/gooey.css">
+<style type="text/css">
+  h1 {
+    color: black;
+  }
+  p {
+    color: black;
+  }
+</style>
+</head>
+<body>
+	<!-- NOTE: By the moment this experiment only goes smooth on Chrome, I need to make some changes.. -->
+
+
+<!--
+==================
+==================
+Main Content
+==================
+==================
+-->
+<!-- Gooey Container -->
+<div class="goo-container">
+  <!-- Content Section -->
+  <section>  
+  </section>
+  <!-- Background Gradient -->
+  <div class="goo-box">
+    <!-- Gooey Cursor -->
+    <div class="cursor goo-cursor"></div>
+  </div>
+</div>
+
+<!-- Content Section -->
+<div class="bg">
+<section>
+  <img src="pics/mojec_logo.png" style="width: 50%;">
+  <h1>MOJEC ENERGY</h1>
+  <p>MOJEC is an indigenous Nigerian oil and gas distribution company with a vision to be the leading distributor of gas to the Nigerian domestic market. We aim to achieve this by developing our business portfolios to create long-term sustainable growth.</p>
+  <p>Our business model is designed to capture the tail end of the value chain i.e. marketing to end users. This model is supported by an experienced Board and senior management team, high standards of corporate governance and corporate social responsibility.</p>
+</section>
+</div>
+
+
+<!-- Gooey Container -->
+<div class="goo-container">
+  <!-- Content Section -->
+  <section>  
+    <p><a href="#" target="_blank">Find Out More</a></p>
+  </section>
+  <!-- Background Gradient -->
+  <div class="goo-box">
+    <!-- Gooey Cursor -->
+    <div class="cursor goo-cursor"></div>
+  </div>
+</div>
+
+
+<!--
+==================
+==================
+SVG Filters
+==================
+==================
+-->
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  version="1.1">
+  <defs>
+    <filter id="goo">
+      <feGaussianBlur 
+        in="SourceGraphic" 
+        stdDeviation="13" 
+        result="goo-blur" 
+      />
+      <feColorMatrix 
+        in="goo-blur" 
+        mode="matrix" 
+        values="
+          1 0 0 0 0  
+          0 1 0 0 0  
+          0 0 1 0 0  
+          0 0 0 20 -11" 
+      />
+    </filter>
+  </defs>
+</svg>
+
+
+<!--
+==================
+==================
+True Cursor
+==================
+==================
+-->
+<div class="cursor true-cursor"></div>
+
+
+<!--
+==================
+==================
+Google Fonts
+==================
+==================
+-->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,600" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/gooey.js"></script>
+</body>
+</html>

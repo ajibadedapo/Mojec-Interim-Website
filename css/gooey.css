@@ -1,0 +1,201 @@
+/* 
+==================
+==================
+Global
+==================
+==================
+*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* Remove Cursor */
+  cursor: none;
+}
+
+/*.bg{
+  background-image: url('../pics/energy.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}*/
+
+html, body {
+  position: relative;
+  margin: 0;
+  /* Font */
+  font-family: 'Montserrat', sans-serif;
+  color: #333333;
+  line-height: 1.7em;
+  font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  /* Prevent horizontal scrollbar */
+  overflow-x: hidden;
+}
+
+/* Layout */
+section {
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2em 0;
+}
+
+/* Headings */
+h1 {
+  margin: 1.8em 0 1.2em 0;
+  font-size: 2.8em;
+  line-height: .94em;
+  font-weight: 200;
+}
+
+/* Links */
+a {
+  color: #FAB599;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid #FAB599;
+}
+
+.goo-container a {
+  color: #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
+}
+
+/* Buttons */
+button {
+  padding: 1.4em 2.6em;
+  letter-spacing: .12em;
+  background: #EEEEEE;
+  border: none;
+  outline: none;
+  transition: ease 2s;
+}
+
+button:hover {
+  background: #D1D1D1;
+}
+
+
+/* 
+==================
+==================
+Gooey Effect
+==================
+==================
+*/
+.goo-container {
+  position: relative;
+}
+
+.goo-box {
+  position: absolute;
+  height: 100%;
+  width: 140%;
+  top: 0;
+  left: 0;
+  margin: auto;
+  margin-left: -20%;
+  background: linear-gradient(90deg, #FAEFCC, #FAB599);
+  -webkit-filter: url("#goo");
+  filter: url("#goo");
+  transform: translateZ(0);
+  z-index: -1;
+}
+
+/* Remove undesired SVG space */
+svg {
+  width: 0;
+  height: 0;
+  /*display: none;*/ /* Don`t use "display none" or Firefox will omit the effect. */
+}
+
+
+/* 
+==================
+==================
+Cursor
+==================
+==================
+*/
+.cursor {
+  pointer-events: none;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin-top: -25px;
+  margin-left: -25px;
+  border-radius: 50%;
+  background: #FAB599;
+  will-change: left, top, transform, background; 
+  transition: linear 20ms;
+  transform: translateZ(0);
+  z-index: 99999;
+  /* Hide Element */
+  left: -500%;
+}
+
+.true-cursor {
+  background: rgba(250,181,153,.35);
+}
+
+/* Cursor animations: True Cursor */
+@keyframes truepointeron {
+  0% {
+    transform: scale(1);
+    background: rgba(250,181,153,.35);
+  }
+  100% {
+    transform: scale(.3);
+    background: #EF8B8B;
+  }
+}
+
+@keyframes truepointeroff {
+  0% {
+    transform: scale(.3);
+    background: #EF8B8B;
+  }
+  100% {
+    transform: scale(1);
+    background: rgba(250,181,153,.35);
+  }
+}
+
+/* Cursor animations: Gooey Cursor */
+@keyframes goopointeron {
+  0% {
+    transform: scale(1);
+    background: #FAB599;
+  }
+  100% {
+    transform: scale(0);
+    background: #EF8B8B;
+  }
+}
+
+@keyframes goopointeroff {
+  0% {
+    transform: scale(0);
+    background: #EF8B8B;
+  }
+  100% {
+    transform: scale(1);
+    background: #FAB599;
+  }
+}
+
+.bg{
+
+  background-size: cover;
+  content: "";
+  display: block;
+  z-index: -2;
+  color: white;
+  min-height: 100vh;
+}
+
+
+

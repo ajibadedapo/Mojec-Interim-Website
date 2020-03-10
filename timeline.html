@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/timeline.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
+	<title></title>
+  <style>
+    body {
+     font-family: 'Montserrat', sans-serif;
+     font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+	<div class="structure" ng-app="app" ng-controller="HomeController">
+<!--   
+<div class="preloaderimg">
+  <img src="https://wallpaperscraft.com/image/tropics_sea_palm_trees_vacation_84858_2412x1810.jpg" alt="" style="display: none;" />
+  <img src="pics/timeline/wall.png" alt="" style="display: none;" />
+  <img src="http://www.churchmilitant.com/images/uploads/2015-06-12-niles-x.jpg" alt="" style="display: none;"/>
+</div> -->
+
+<div class="timeline"></div>
+
+<div class="timeline">  
+   <div ng-repeat="date in dates track by $index" class="date date-{{$index}}">
+      <div class="goal_wrap goal_real_estate" ng-show="goal_real_estate_{{date}}">
+       <i class="fa fa-book" aria-hidden="true"></i>
+     </div>
+     <div class="goal_wrap goal_plastic" ng-show="goal_plastic_{{date}}">
+       <i class="fa fa-industry" aria-hidden="true"></i>
+     </div>
+     <div class="goal_wrap goal_transform" ng-show="goal_transform_{{date}}">
+       <i class="fa fa-bolt" aria-hidden="true"></i>
+     </div>
+     <div class="goal_wrap goal_meter" ng-show="goal_meter_{{date}}">
+       <i class="fa fa-truck" aria-hidden="true"></i>
+     </div>
+      <div class="goal_wrap goal_company" ng-show="goal_company_{{date}}">
+       <i class="fa fa-industry" aria-hidden="true"></i>
+     </div>
+     <div class="goal_wrap goal_alscon" ng-show="goal_alscon_{{date}}">
+       <i class="fa fa-bolt" aria-hidden="true"></i>
+     </div>
+      <div class="goal_wrap goal_award1" ng-show="goal_award1_{{date}}">
+       <i class="fa fa-trophy" aria-hidden="true"></i>
+     </div>
+     <div class="goal_wrap goal_award2" ng-show="goal_award2_{{date}}">
+       <i class="fa fa-trophy" aria-hidden="true"></i>
+     </div>
+     <div class="goal_wrap goal_award3" ng-show="goal_award3_{{date}}">
+       <i class="fa fa-award" aria-hidden="true"></i>
+     </div>
+    <p class="focus">
+      <a href="#">{{date}}</a>
+    </p>
+  </div>
+</div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <div><img src="pics/mojec_logo.png" width="10%"></div>
+        <h1 style="color: #295ea5; font-weight: bold;">{{goal_title}}</h1>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+<script src="js/timeline.js"></script>
+</html>

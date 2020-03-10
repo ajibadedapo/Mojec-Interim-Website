@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style>
+    
+    .example {
+      width:640px;
+      margin:0 auto;
+      position:relative;
+    }
+    .parallax {
+      display:block;
+      position:relative;
+      width:360px;
+      height:407px;
+      margin:-40px 0 0 0;
+      /*overflow:hidden;
+      padding:30px;*/
+      text-indent:-999px;
+      background:url(http://preview.vertic.com/vertic/labs/examples/parallaxhover/5/7-10-full.png) center center no-repeat;
+      float:left;
+    }
+    .parallax:first-child {
+      background-image:url(http://preview.vertic.com/vertic/labs/examples/parallaxhover/5/4-6-full.png);
+      width:440px;
+      height:361px;
+      margin:0 -160px 0 0;
+    }
+    .parallax .level {
+      display:block;
+      position:absolute;
+      width:100%;
+      height:100%;
+      top:0;
+      left:0;
+      background-position:center center;
+      background-repeat:no-repeat;
+    } 
+    .parallax.enhanced,
+    .parallax.enhanced:first-child {
+      background:none;
+    }
+  </style>
+</head>
+<body>
+    <div class="wrapper"><div class="example text">
+    <a href="#" class="parallax" data-imgname="http://preview.vertic.com/vertic/labs/examples/parallaxhover/5/4-6-*.png" data-levels="8" data-space="30">
+      4.-6. klasse
+    </a>
+    <a href="#" class="parallax" data-imgname="http://preview.vertic.com/vertic/labs/examples/parallaxhover/5/7-10-*.png" data-levels="8" data-space="30">
+      80% Footfrint in the Nigerian Meter Market
+    </a>
+  </div></div>
+</body>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="js/sample.js"></script>
+</html>

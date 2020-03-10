@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href='https://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href='https://fonts.googleapis.com/css?family=Cabin+Condensed:700' rel='stylesheet' type='text/css'>
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+</head>
+<body style="background-color: white">
+		    <div id="logo" style="text-align: -webkit-center;
+    position: absolute;
+    top: 10%;
+    width: 150%; display: none;"><img src="pics/mojec_logo.png" width="10%"></div>
+		    <div class="text-effect">
+			  <!-- Select the text in the preview and type in your own -->
+			  <h1 class="neon" data-text="Mojec International" >Mojec International</h1>
+			  <div class="gradient"></div>
+			  <div class="spotlight"></div>
+			</div>
+			<!-- loading text -->
+			<!-- <div class="loading wave">
+			  Loading
+			</div> -->
+			<!-- button -->
+			<div class="react_button">
+			<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+			  <defs>
+			    <filter id="goo">
+			      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+			      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+			      <feComposite in="SourceGraphic" in2="goo"/>
+			    </filter>
+			  </defs>
+			</svg>
+
+			<span class="button--bubble__container">
+			  <a href="#" class="button button--bubble">
+			    Enter
+			  </a>
+			  <span class="button--bubble__effect-container">
+			    <span class="circle top-left"></span>
+			    <span class="circle top-left"></span>
+			    <span class="circle top-left"></span>
+
+			    <span class="button effect-button"></span>
+
+			    <span class="circle bottom-right"></span>
+			    <span class="circle bottom-right"></span>
+			    <span class="circle bottom-right"></span>
+			  </span>
+			</span>
+			</div>
+
+
+			<canvas id="nokey" width="800" height="800">
+
+
+			</canvas>
+
+</body>
+
+
+
+<!-- button scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/plugins/CSSPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/easing/EasePack.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenLite.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script src="script.js"></script>
+
+
+
+<script> 
+	$(window).on('load', function(){
+		$('#logo').fadeIn(10000);	
+		$(".text-effect").fadeIn(5000);
+		// setTimeout(function(){
+		// 	$(".loading").fadeOut(5000);
+		// }, 12000);
+		setTimeout(function(){
+			$(".react_button").fadeIn(3000);
+		}, 2000);
+		
+	});
+	//to show to map
+	// function afterMap(){
+	// 	setTimeout(function(){
+	// 		$('#earth_div').css('display', 'contents');
+	// 		initialize();
+	// 	}, 1000);	
+	// }
+	$('.button--bubble').on('click', function(){
+		$('#logo').fadeOut(4000);
+		$('.react_button').fadeOut(4000);
+		$('.text-effect').fadeOut(4000);
+		setTimeout(function(){
+			$('#nokey').fadeOut(3000);
+		}, 4000);
+		setTimeout(function(){
+			window.location.href = 'home2.html';
+		}, 5000);
+	})
+</script>
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+</html>
+
+

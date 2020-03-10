@@ -1,0 +1,126 @@
+.banner {  overflow: auto; position:relative }
+.banner ul {padding-left: 0;}
+.banner li { list-style: none; }
+.banner ul li { float: left; }
+.banner .dots {
+		position: absolute;
+		left: 0;
+    right: 0;
+		margin-left: auto;
+		margin-right:auto;
+    display:block;
+		text-align:center;
+	}
+		.banner .dots li {
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			margin: 0 4px;
+			text-indent: -999em;
+			border: 2px solid #555;
+			border-radius: 6px;
+			cursor: pointer;
+			opacity: .4;
+			-webkit-transition: background .5s, opacity .5s;
+			-moz-transition: background .5s, opacity .5s;
+			transition: background .5s, opacity .5s;
+		}
+			.banner .dots li.active {
+				background: #aaa;
+				opacity: 1;
+			}
+
+.banner .client {
+		background-size: 200px 200px !important;
+		height: 200px;
+		float: none;
+		position: relative;
+		margin: 0 auto;
+		transition: background 0.5s ease;
+		overflow:visible;
+}    	
+.banner h3, .banner h4 {
+	text-align: center;
+  font-family: 'montserrat', sans-serif;
+	text-transform: uppercase;
+	color: #555;
+}
+.banner h3 {
+		font-size: 34px;
+		font-weight: 400;
+		letter-spacing: 5px;
+}
+.banner h4 span {
+	  text-transform:uppercase;
+    letter-spacing: 3px;
+	  font-size: 22px;
+}
+.banner .client.va-logo {   background: url("../pics/certificate/son_b.png") no-repeat center center; }
+	.banner .client.disa-logo { background: url("../pics/certificate/dlms_b.png") no-repeat center center; }
+	.banner .client.centcom-logo { background: url("../pics/certificate/man_b.png") no-repeat center center; }
+	.banner .client.dos-logo { background: url("../pics/certificate/kema_b.png") no-repeat center center; }
+	
+	.banner .client.va-logo:hover { background: url("../pics/certificate/son_wh.png") no-repeat center center; }
+	.banner .client.disa-logo:hover { background: url("../pics/certificate/dlms_wh.png") no-repeat center center; }
+	.banner .client.centcom-logo:hover { background: url("../pics/certificate/man_wh.png") no-repeat center center; }
+	.banner .client.dos-logo:hover { background: url("../pics/certificate/kema_wh.png") no-repeat center center; }
+	
+	.banner .client.graham-holdings-logo { background: url("../pics/certificate/disco/aedc_b.png") no-repeat center center; }
+	.banner .client.blackboard-logo { background: url("../pics/certificate/disco/ekedc_b.png") no-repeat center center; }
+	.banner .client.k12-logo { background: url("../pics/certificate/disco/ie_b.png") no-repeat center center; }
+	.banner .client.kaplan-university-logo { background: url("../pics/certificate/disco/eedc_b.png") no-repeat center center; }
+	.banner .client.ibedc { background: url("../pics/certificate/disco/ibedc_b.png") no-repeat center center; }
+	.banner .client.jed { background: url("../pics/certificate/disco/jed_b.png") no-repeat center center; }
+	.banner .client.kaduna { background: url("../pics/certificate/disco/kaduna_b.png") no-repeat center center; }
+	.banner .client.kano { background: url("../pics/certificate/disco/kano_b.png") no-repeat center center; }
+
+
+	
+	.banner .client.graham-holdings-logo:hover { background: url("../pics/certificate/disco/aedc.png") no-repeat center center; }
+	.banner .client.blackboard-logo:hover { background: url("../pics/certificate/disco/ekedc.png") no-repeat center center; }
+	.banner .client.k12-logo:hover { background: url("../pics/certificate/disco/ie.png") no-repeat center center; }
+	.banner .client.kaplan-university-logo:hover { background: url("../pics/certificate/disco/eedc.png") no-repeat center center; }
+	.banner .client.ibedc:hover { background: url("../pics/certificate/disco/ibedc.png") no-repeat center center; }
+	.banner .client.jed:hover { background: url("../pics/certificate/disco/jed.jpg") no-repeat center center; }
+	.banner .client.kaduna:hover { background: url("../pics/certificate/disco/kaduna.png") no-repeat center center; }
+	.banner .client.kano:hover { background: url("../pics/certificate/disco/kano.png") no-repeat center center; }
+	
+	li:nth-child(1), li:nth-child(2) { width: 100%; }
+	.banner .client-group .one-fourth { 
+		float: left;
+		margin-left: 2.564102564102564%;
+		width: 23.076923076923077%;
+	}
+	.banner .client-group .first {
+		clear: both;
+		margin-left: 0;
+	}
+	
+	@media only screen and (max-width: 1200px) {
+		.banner .client {
+			background-size: 125px 125px !important;
+			height: 125px;
+		}
+	}
+	@media only screen and (max-width: 890px) {
+		.banner .client {
+			background-size: 200px 200px !important;
+			height: 200px;
+		}
+		.banner .client-group .one-fourth { 
+			float: left;
+			margin-left: 2.564102564102564%;
+			width: 48.717948717948715%;
+		}
+		.banner .client-group .first, .banner .client-group .one-fourth:nth-child(4) {
+			clear: both;
+			margin-left: 0;
+		}
+	}
+	@media only screen and (max-width: 500px) {
+		.banner .client-group .one-fourth {
+			width: 100%;
+			clear: both;
+			margin: 20px 0;
+		}
+	}
